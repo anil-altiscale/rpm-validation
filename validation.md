@@ -49,3 +49,4 @@ In order to deploy the changes to your cluster and test, either
 b. Click on **Build With Parameters**. enter your cluster name [e.g. anil1007] in *CLUSTER_NAME* parameter.
 c. enter the appropriate options from below in *OPERATIONS_TO_PERFORM* parameter: STOP_DESKTOP,STOP_CLUSTER,DEPLOY_CLUSTER,START_CLUSTER,CHECK_CLUSTER,DEPLOY_DESKTOP,START_DESKTOP,CHECK_DESKTOP,TEST_CLUSTER,TEST_DESKTOP
 d. enter the appropriate DP_RELEASE in *HAIRBALL_RELEASE_BRANCH* parameter. We can verify this version in CHEF_RELEASE parameter of our create_pipeline_cluster job [https://jenkins-dev.service.altiscale.com/job/create_pipeline_cluster/]. The latest release is DP_RELEASE_20190327 which should be the value in most cases unless you changed the RELEASE specifically when creating a cluster.
+![image-not-found](./Assets/image02.png)

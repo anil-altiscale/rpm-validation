@@ -15,6 +15,7 @@ Instead of manually removing the existing verticloud-prod RPM on your desktop an
     yum --enablerepo=verticloud-test list | grep <service>
 
     example: yum --enablerepo=verticloud-test list | grep hadoop-2.7.7
+    
     name: alti-hadoop-2.7.7.x86_64        |  version-release: 5.0.0-202001172340    |  verticloud-test
 
 NOTE: Make sure the **version** and **release** format of the RPM aligns with the already installed RPM in the cluster for your services.

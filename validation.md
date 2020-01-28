@@ -10,7 +10,13 @@ Instead of manually removing the existing verticloud-prod RPM on your desktop an
 2. On jenkins-dev, open the yum-test-repo-upload job:  https://jenkins-dev.service.altiscale.com/job/yum-test-repo-upload/
 3. Click on **Build With Parameters**. Select *Other-File* as the DownloadSource parameter and attach the RPM from your local machine by clicking on *Choose File* under RPM_FILE parameter![image-not-found](./Assets/image01.png)
 4. Click on **Build**
+5. After the *yum-test-repo-upload* and its downstream job has successfully run, verify whether the RPM was published to yum-test-repo by issuing the following command:
+    yum --enablerepo=verticloud-test list | grep <service>
 
+    example: yum --enablerepo=verticloud-test list | grep hadoop-2.7.7
+    name: alti-hadoop-2.7.7.x86_64        |  version-release: 5.0.0-202001172340    |  verticloud-test
+
+NOTE: Make sure the **version** and **release** format of the RPM aligns with the already installed RPM in the cluster for your services.
 
 ## Overriding the environment cookbook of your cluster
 After the *yum-test-repo-upload* and its downstream job has successfully run, we need to override the environment cookbook of the respective cluster to
